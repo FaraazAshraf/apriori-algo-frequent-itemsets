@@ -93,10 +93,13 @@ public class NaiveBayes {
 
         if(classValue == 0) {
             probability = numerator*1.0/totalCountOfClass0*1.0;
+            probability *= totalCountOfClass0 / numTuples;
         }
         else {
             probability = numerator*1.0/totalCountOfClass1*1.0;
+            probability *= totalCountOfClass1 / numTuples;
         }
+
 
         return probability;
     }
